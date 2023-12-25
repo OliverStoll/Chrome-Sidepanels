@@ -5,11 +5,14 @@ title.textContent = newTitle;
 document.title = newTitle;
 let favicon = document.querySelector('link[rel="icon"]') || document.createElement('link');
 favicon.rel = 'icon';
-favicon.href = 'https://w7.pngwing.com/pngs/507/339/png-transparent-computer-icons-directory-windows-10-others-miscellaneous-angle-rectangle-thumbnail.png';
+favicon.href = 'https://filestore.community.support.microsoft.com/api/images/097670f5-ede5-4260-86c9-1189c9e8aa2b?upload=true';
 document.head.appendChild(favicon); 
 
 
-// Switch Header with breadcrumbs
+
+
+// ############     BREADCRUMBS      ############
+
 const breadcrumbsDiv = document.createElement('div');
 breadcrumbsDiv.id = 'breadcrumbs'
 const sections = newTitle.split('/')
@@ -27,12 +30,41 @@ for (let i=0; i < sections.length; i++) {
     breadcrumbsDiv.appendChild(separatorSpan);
   }
 }
-
 document.body.prepend(breadcrumbsDiv)
 
 
 
 
+// ############     SIDEBAR      ############
+
+var ul = document.createElement("ul");
+ul.id = "sidebar"
+
+// Add list items to the unordered list
+var items = [
+  {text:"Drive", link: "file:///C:/Drive/"},
+  {text:"Downloads", link: "file:///C:/Users/Oliver/Downloads/"},
+];
+items.forEach(function(item) {
+  var li = document.createElement("li");
+  var link = document.createElement("a");
+  link.textContent = item.text;
+  link.setAttribute("href", item.link);
+  li.appendChild(link);
+  ul.appendChild(li);
+});
+
+var table = document.querySelector("table");
+var parent = table.parentNode;
+parent.insertBefore(ul, table);
+// Set CSS styles for ul and table
+ul.style.float = "left";
+ul.style.width = "30%";
+table.style.width = "70%";
+
+
+
+// ############     MODIFY FOLDERS      ############
 
 const rows = document.querySelectorAll('#tbody tr');
 
@@ -45,7 +77,6 @@ rows.forEach(row => {
     folder.classList.add("folder");
   }
 
-  // handle hidden entries
   if (text.endsWith('.ini') || text.startsWith('.')) {
     row.style.display = 'none';
     folder.classList.add('hidden')
@@ -55,8 +86,10 @@ rows.forEach(row => {
   const dotIndex = text.lastIndexOf('.');
   if (dotIndex !== -1) {
     const fileEnding = text.substring(dotIndex + 1);
+    if (fileEnding.trim() !== "") {
+      folder.classList.add(fileEnding);
+    }
     text = text.substring(0, dotIndex)
-    folder.classList.add(fileEnding);
   }
 
   folder.textContent = text;
@@ -64,8 +97,8 @@ rows.forEach(row => {
 
 
 
-//  ##################     HANDLE FOCUS     ##################
 
+//  ##################     TABBING     ##################
 
 document.addEventListener('keydown', function(event){
   // KEY UP / DOWN
@@ -77,7 +110,6 @@ document.addEventListener('keydown', function(event){
       .filter(element => !element.classList.contains('hidden'))
       .filter(element => !element.classList.contains('breadcrumb'))
       .filter(element => element.id !== "parentDirLink");
-
     let index = focusableArray.indexOf(focusedElement);
 
     // switch to next or last focusable element
@@ -109,19 +141,15 @@ document.addEventListener('keydown', function(event){
 
 
 
-//  ##################     HANDLE KEY-SEARCH     ##################
 
-// Get all the file names in an array
+//  ##################    KEY-SEARCH     ##################
+
 const fileNames = Array.from(document.querySelectorAll('#tbody td[data-value] a')).map(a => a.textContent.trim());
-
-// Variable to store typed characters
 let typedCharacters = '';
 let timer;
 
-// Function to focus on the best-guess element
 function focusBestGuess() {
   const matchingElement = fileNames.find(fileName => fileName.toLowerCase().startsWith(typedCharacters));
-
   if (matchingElement) {
     const matchingLink = document.querySelector(`#tbody td[data-value][data-value^="${matchingElement}"] a`);
     if (matchingLink) {
@@ -129,43 +157,29 @@ function focusBestGuess() {
     }
   }
 }
-
-// Keydown event handler
 document.addEventListener('keydown', function(event) {
   const keyPressed = event.key;
-
-  // Check if the pressed key is an alphanumeric character
   if (/^[a-zA-Z]$/.test(keyPressed)) {
     typedCharacters += keyPressed.toLowerCase();
     focusBestGuess();
-
     clearTimeout(timer);
-    timer = setTimeout(function() {
-      typedCharacters = '';
-    }, 1500);
+    timer = setTimeout(function() {typedCharacters = '';}, 1500);
   }
 });
 
 
-// Breadcrumb event handler
+
+
+//  ##################    NUMBER KEY-SELECTOR     ##################
+
 document.addEventListener('keydown', function(event) {
   const keyPressed = event.key;
-
-  // Check if the pressed key is a number from 1 to 9
   if (/^[1-9]$/.test(keyPressed)) {
-    // Get all breadcrumb elements
-    const breadcrumbs = document.querySelectorAll('.breadcrumb');
-
-    // Get the index based on the pressed number
-    const index = parseInt(keyPressed, 10) - 1; // Subtract 1 because arrays are zero-based
-
-    // Check if the index is valid and the breadcrumb exists at that index
-    if (index >= 0 && index < breadcrumbs.length) {
-      // Get the href of the breadcrumb at the index and open it in the same tab
-      const link = breadcrumbs[index].getAttribute('href');
-      if (link) {
-        window.location.href = link;
-      }
+    const index = parseInt(keyPressed, 10) - 1;
+    const sidebar = document.getElementById('sidebar');
+    const listItems = sidebar.querySelectorAll('li');
+    if (index >= 0 && index < listItems.length) {
+        window.location.href = listItems[index].querySelector('a').getAttribute('href');
     }
   }
 });

@@ -5,7 +5,7 @@ title.textContent = newTitle;
 document.title = newTitle;
 let favicon = document.querySelector('link[rel="icon"]') || document.createElement('link');
 favicon.rel = 'icon';
-favicon.href = 'https://filestore.community.support.microsoft.com/api/images/097670f5-ede5-4260-86c9-1189c9e8aa2b?upload=true';
+favicon.href = 'https://raw.githubusercontent.com/OliverStoll/better-local-explorer/main/res/icons/explorer.png';
 document.head.appendChild(favicon); 
 
 
@@ -42,7 +42,7 @@ ul.id = "sidebar"
 
 // Add list items to the unordered list
 var items = [
-  {text:"Drive", link: "file:///C:/Drive/"},
+  {text:"DRIVE", link: "file:///C:/Drive/"},
   {text:"Downloads", link: "file:///C:/Users/Oliver/Downloads/"},
 ];
 items.forEach(function(item) {

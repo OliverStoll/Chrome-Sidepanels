@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Home Assistant",
+  "version": "1.0",
+  "icons": {
+      "128": "images/icon128.png"
+    },
+  "permissions": [
+    "activeTab",
+    "sidePanel",
+    "tabs"
+  ],
+  "background": {
+    "service_worker": "service-worker.js"
+  },
+  "action": {
+    "default_title": "Open Panel"
+  },
+  "side_panel": {
+    "default_path": "popup.html"
+  }
+}

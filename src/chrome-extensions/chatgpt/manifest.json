@@ -1,0 +1,69 @@
+{
+    "manifest_version": 3,
+    "name": "ChatGPT",
+    "description": "TEST",
+    "version": "0.0",
+    "action": {
+      "default_title": "Open ChatGPT"
+    },
+    "side_panel": {
+      "default_path": "html/popup.html",
+      "default_title": "ChatGPT"
+    },
+    "default_locale": "en",
+    "icons": {
+        "16": "icons/16.png",
+        "48": "icons/48.png",
+        "128": "icons/128.png",
+        "300": "icons/300.png"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://chat.openai.com/*"],
+            "css": ["css/modify_website.css"],
+            "run_at": "document_end",
+            "all_frames": true
+        }
+    ],
+    "commands": {
+        "_execute_action": {
+            "suggested_key": {
+                "windows": "Alt+I",
+                "mac": "Alt+I",
+                "chromeos": "Alt+I",
+                "linux": "Alt+I"
+            }
+        }
+    },
+    "background": {
+        "service_worker": "js/background.js",
+        "type": "module"
+    },
+    "host_permissions": [
+        "<all_urls>"
+    ],
+    "permissions": [
+        "storage",
+        "scripting",
+        "alarms",
+        "contextMenus",
+        "declarativeNetRequest",
+        "sidePanel",
+        "tabs",
+        "activeTab"
+    ],
+    "omnibox": {
+        "keyword": "gpt"
+    },
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "images/*",
+                "css/content-script.css"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ]
+}

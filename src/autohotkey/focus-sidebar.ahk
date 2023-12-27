@@ -37,7 +37,19 @@ CheckIfSidebarOpen() {
     if (CheckIfSidebarOpen()) {
         sleep(500)
         try {
-            ControlClick "x1800 y970", "A"
+            ControlClick "x1800 y140", "A"
+        } catch {
+        }
+    }
+}
+
+; focus homeassistant sidebar
+~!u:: {
+    Sleep(100)
+    if (CheckIfSidebarOpen()) {
+        sleep(500)
+        try {
+            ControlClick "x1800 y140", "A"
         } catch {
         }
     }

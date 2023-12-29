@@ -1,14 +1,14 @@
 {
   "manifest_version": 3,
-  "name": ".TickTick",
+  "name": "Github",
   "version": "1.0",
   "commands": {
         "_execute_action": {
             "suggested_key": {
-                "windows": "Alt+H",
-                "mac": "Alt+H",
-                "chromeos": "Alt+H",
-                "linux": "Alt+H"
+                "windows": "Alt+P",
+                "mac": "Alt+P",
+                "chromeos": "Alt+P",
+                "linux": "Alt+P"
             }
         }
     },
@@ -31,10 +31,9 @@
   },
   "content_scripts": [
     {
-      "matches": ["https://ticktick.com/webapp/*"],
+      "matches": ["https://www.github.com/*"],
       "js": ["content.js"],
-      "css": ["content.css"],
-      "run_at": "document_idle",
+      "run_at": "document_end",
       "all_frames": true
     }
   ]

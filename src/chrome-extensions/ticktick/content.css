@@ -1,0 +1,13 @@
+
+
+    #task-list-content > ul > li > div.l-task > div.t-inner.task-inner > div, #task-list-content > ul > li > div.l-task > div.t-line {
+        margin-left: 25px!important;
+    }
+
+    #task-list-content > ul > li > div.l-task > div.t-inner.task-inner > div div.tips {
+        margin-right: 0px!important;
+    }
+
+    #task-list-content > ul > li > div.l-task > div.t-inner.task-inner > span {
+        left: 2px!important;
+    }

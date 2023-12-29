@@ -14,6 +14,20 @@ CheckIfSidebarOpen() {
 }
 
 ; TODO: check the window size and dont assume fullsized windows
+ClickSidebarSimple(sleepTime := 500) {
+    Sleep(100)
+    if (CheckIfSidebarOpen()) {
+        sleep(sleepTime)
+        try {
+            ControlClick "x1800 y140", "A"
+        } catch {
+        }
+    }
+    return
+}
+
+
+
 
 ; focus chatgpt sidebar
 ~!i:: {
@@ -32,25 +46,6 @@ CheckIfSidebarOpen() {
 }
 
 ; focus localexplorer sidebar
-~!o:: {
-    Sleep(100)
-    if (CheckIfSidebarOpen()) {
-        sleep(500)
-        try {
-            ControlClick "x1800 y140", "A"
-        } catch {
-        }
-    }
-}
-
-; focus homeassistant sidebar
-~!u:: {
-    Sleep(100)
-    if (CheckIfSidebarOpen()) {
-        sleep(500)
-        try {
-            ControlClick "x1800 y140", "A"
-        } catch {
-        }
-    }
-}
+~!o:: ClickSidebarSimple()
+~!u:: ClickSidebarSimple()
+~!h:: ClickSidebarSimple(2000)

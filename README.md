@@ -3,11 +3,31 @@ Bundle of chrome extensions to do everything in the chrome sidepanel. This is a 
 
 
 # How to install
-- Clone the repo
-- Install the "Local Explorer" chrome extension (external)
-- Install the chrome extensions via [chrome://extensions]() -> Developer mode -> Load unpacked
-- Make the AutoHotKey scripts run on startup
+- Clone this repository
+- Install external Chrome extensions: 
+  - "Local Explorer - Open File Links in Chrome"
+  - "Side Panel Tab - pin any web in side panel"
+- Install internal Chrome extension folders 
+  - -> via [chrome://extensions]() -> Developer mode -> Load unpacked
+- Make the AutoHotKey scripts run on startup 
+  - -> move copy to folder found by searching "shell:startup" in Windows explorer
 
 
-# Additional Info
-This repository depends on additional installations of autohotkey to handle focus of the sidebar, and in the future a local server to handle file manipulation.
+# Side Panels
+- ChatGPT
+- TickTick
+- Notion
+- Home Assistant
+- Local Explorer
+- Github
+- Zotero
+### Planned ?
+- Google Calendar
+- Gmail
+
+
+# Shortcuts
+#### Home Assistant
+- `1-9`: Spotify Playlist
+- `JKLNM`: Spotify Playback
+- `ASDF`: Light scenes

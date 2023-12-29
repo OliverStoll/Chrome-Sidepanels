@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": ".TickTick",
+  "name": ".Zotero",
   "version": "1.0",
   "commands": {
         "_execute_action": {
@@ -31,10 +31,9 @@
   },
   "content_scripts": [
     {
-      "matches": ["https://ticktick.com/webapp/*"],
+      "matches": ["https://www.zotero.org/*"],
       "js": ["content.js"],
-      "css": ["content.css"],
-      "run_at": "document_idle",
+      "run_at": "document_end",
       "all_frames": true
     }
   ]

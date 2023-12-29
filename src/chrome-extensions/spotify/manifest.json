@@ -14,7 +14,8 @@
   "permissions": [
     "activeTab",
     "sidePanel",
-    "tabs"
+    "tabs",
+    "storage"
   ],
   "background": {
     "service_worker": "service-worker.js"
@@ -23,6 +24,6 @@
     "default_title": "Open Panel"
   },
   "side_panel": {
-    "default_path": "popup.html"
+    "default_path": "side_panel.html"
   }
 }

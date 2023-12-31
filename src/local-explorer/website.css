@@ -1,0 +1,122 @@
+/* define style vars */
+:root {
+  --text-color: #ffffff;
+  --bg-color: #1c1c1c;
+  --border-color: #333;
+}
+
+
+div#parentDirLinkBox, h1, th {
+  display: none!important;
+}
+
+body {
+  background-color: var(--bg-color);
+  margin: 1em;
+  font-family: 'Segoe UI', sans-serif!important;
+  font-weight: 400!important;
+  text-decoration: none!important;
+}
+
+
+table {
+  border-collapse: collapse;
+  background-color: var(--bg-color);
+  table-layout: auto;
+  width: 85%;
+}
+tr {
+  border-top: 1px solid var(--border-color);
+}
+tr:last-child {
+  border-bottom: 1px solid var(--border-color);
+}
+
+
+td {
+  width: 70%;
+  max-width: 70%;
+  white-space: nowrap;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  padding: 0.5em;
+  font-size: 1em!important;
+}
+td.detailsColumn {
+  display: none!important;
+  color: #555;
+  text-align: right;
+  width: 20%;
+  font-size: 0.85em!important;
+}
+
+
+
+a {
+  color: var(--text-color);
+  text-decoration: none!important;
+}
+a.icon {
+  background: left top no-repeat;
+  background-size: 26px 26px!important;
+  padding-left: 35px!important;
+}
+a.icon:hover {
+  color: #999;
+  transition: 0.15s;
+}
+
+
+
+
+/* BREADCRUMBS */
+#breadcrumbs {
+    margin: 1em 0em;
+    padding: 0.6em;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+}
+#breadcrumbs span {
+    color: var(--text-color)!important;
+    font-size: 1.15em!important;
+}
+
+
+/* sidebar */
+ul {
+  list-style-type: none;
+  padding: 0 0 1em 1em;
+  margin: 0;
+}
+li {
+  display: inline;
+  margin-right: 1em;
+  padding: 0.5em 0em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ICONS */
+a.pdf {background-image: url('https://raw.githubusercontent.com/OliverStoll/better-local-explorer/main/res/icons/pdf.png')!important;}
+a.gsheet {background-image: url(https://raw.githubusercontent.com/OliverStoll/better-local-explorer/main/res/icons/gsheet.png)!important;}
+a.gdoc {background-image: url(https://raw.githubusercontent.com/OliverStoll/better-local-explorer/main/res/icons/gdoc.png)!important;}
+a.folder {background-image: url(https://raw.githubusercontent.com/OliverStoll/better-local-explorer/main/res/icons/folder.png)!important;}
+a.png, a.jpg, a.jpeg {background-image: url(https://raw.githubusercontent.com/OliverStoll/better-local-explorer/main/res/icons/image.png)!important;}
+a.exe, a.bat {background-image: url(https://raw.githubusercontent.com/OliverStoll/better-local-explorer/main/res/icons/exe.png)!important;}
+a.m4a {background-image: url(https://raw.githubusercontent.com/OliverStoll/better-local-explorer/main/res/icons/audio.png)!important;}
+a.zip {background-image: url(https://raw.githubusercontent.com/OliverStoll/better-local-explorer/main/res/icons/zip.png)!important;}
+a.xlsm, a.xlsx {background-image: url(https://raw.githubusercontent.com/OliverStoll/better-local-explorer/main/res/icons/excel.png)!important;}
+a.docx {background-image: url(https://raw.githubusercontent.com/OliverStoll/better-local-explorer/main/res/icons/word.png)!important;}
+a.csv {background-image: url(https://raw.githubusercontent.com/OliverStoll/better-local-explorer/main/res/icons/csv.png)!important;}

@@ -1,0 +1,43 @@
+
+/* REDUCE MARGINS */
+#task-list-content > ul > li > div.l-task > div.t-inner.task-inner > div, #task-list-content > ul > li > div.l-task > div.t-line {
+    margin-left: 25px!important;
+}
+#task-list-content > ul > li > div.l-task > div.t-inner.task-inner > div div.tips {
+    margin-right: 0px!important;
+}
+#task-list-content > ul > li > div.l-task > div.t-inner.task-inner > span {
+    left: 2px!important;
+}
+
+/* HIDE CLUTTER */
+#task-list-content > ul > li .tips .tip.project-hint {
+    display: none!important;
+}
+#task-list-view > header {
+    visibility: hidden!important;
+    height: 0px!important;
+}
+#task-list-content > ul > div.section-header {
+    display: none!important;
+}
+
+
+/* IMPROVE READABILITY */
+#task-list-content > ul > li > div.l-task > div.t-inner.task-inner div.title {
+    font-size: 1.35em!important;
+    height: 50px!important;
+    word-break: break-word!important;
+    padding-top: 13px!important;
+    padding-left: 5px!important;
+}
+#task-list-content > ul > li > div.l-task > div.t-inner.task-inner > span.t-check {
+    height: 50px!important;
+}
+
+#task-list-content > ul > li {
+    position: relative!important;
+    top: 0!important;
+    height: 50px!important;
+    vertical-align: middle!important;
+}

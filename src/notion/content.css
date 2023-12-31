@@ -1,0 +1,28 @@
+.layout-wide {
+    --margin-width: 10px!important;
+}
+
+.layout-wide .notion-page-content div {
+    max-width: 1920px!important;
+}
+
+.layout-wide .notion-page-content div:not(.notion-page-block) > div.pseudoSelection {
+    width: 6px!important;
+    margin-right: 8px!important;
+}
+
+.layout-wide > .layout-content-with-divider {
+    display: none!important;
+}
+.layout-wide > .layout-full {
+    display: none!important;
+}
+
+div.layout-wide > div:nth-child(2) > div > div > div.pseudoSelection {
+    visibility: hidden!important;
+    height: 50px!important;
+}
+
+div.notion-topbar-action-buttons {
+    display: none!important;
+}

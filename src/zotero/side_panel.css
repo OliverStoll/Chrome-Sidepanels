@@ -3,10 +3,30 @@ body {
     margin: 0!important;
     padding: 0!important;
     overflow: hidden;
-    background-color: #1e1e1e;
+    background-color: #282828;
+}
+select, li, div {
+    font-family: "Segoe UI", "Roboto", sans-serif;";
+}
+select {
+    background: #282828;
+    padding: 8px;
+    margin: 0 auto;
+    display: block;
+    font-size: 20px;
+    color: white;
+    border: none;
+    border-bottom: 0px solid #404040;
+    border-radius: 0px;
+}
+#zotero-header {
+    display: block;
+    width: 100%;
+    padding: 2px 0;
+    border-bottom: 1px solid #494949;
 }
 a {
-    color: #eee;
+    color: #fff;
     text-decoration: none;
     font: 14px Roboto, sans-serif;
     padding: 0.7em 0;
@@ -18,13 +38,15 @@ a {
 
 li {
     list-style: none;
-    border-bottom: 1px solid #262626;
+    border-bottom: 1px solid #404040;
 }
 
 #items-list {
-    padding: 0 8px 0 16px;
+    margin-top: 0;
+    padding: 4px 8px 0 16px;
     max-height: 98.55vh;
     overflow-y: auto;
+
 }
 
 #items-list::-webkit-scrollbar-track {

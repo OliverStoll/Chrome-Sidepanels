@@ -1,7 +1,7 @@
+/* HIDE CLUTTER */
 button.rounded-xl.btn.btn-neutral, div.relative.text-center > span {
     display: none;
 }
-
  div > div.inline-flex.rounded-xl {
     display: none;
 }
@@ -11,3 +11,53 @@ button.rounded-xl.btn.btn-neutral, div.relative.text-center > span {
  div.relative > div.flex > div.mb-5.text-2xl.font-medium {
     display: none;
  }
+ #__next  main > div > div > div > div.flex.h-full.flex-col.items-center.justify-center div.gizmo-shadow-stroke {
+    display: none;
+ }
+
+
+ /* HIDE CHAT ICONS */
+#__next main > div > div > div > div > div.flex > div.text-token-text-primary > div > div {
+    padding: 0px!important;
+}
+#__next main > div > div > div > div > div.flex > div.text-token-text-primary > div  {
+    padding: 16px 0px !important;
+}
+#__next main > div > div > div > div > div.flex > div.text-token-text-primary > div > div > div > div > div > div.gizmo-shadow-stroke {
+    position: absolute;
+    left: 12px!important;
+    top: -4px!important;
+}
+#__next main > div > div > div > div > div.flex > div.text-token-text-primary > div > div > div > div.font-semibold {
+    visibility: hidden;
+}
+
+
+::-webkit-scrollbar-track {
+    background: #1e1e1e;
+}
+::-webkit-scrollbar-thumb {
+    background: #383838;
+    border-radius: 10px;
+}
+::-webkit-scrollbar {
+    width: 6px!important;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+body {
+    background-color: #282828!important;
+}
+:root{
+    --surface-secondary: #282828!important;
+}
+.dark\:bg-gray-800 {
+    background-color: #282828!important;
+}
+
+
+/* FIX WIDTH */
+#__next main > div > div > div > div > div {
+    width: calc(100% - 12px)!important;
+}

@@ -1,28 +1,36 @@
-.layout-wide {
+.layout {
     --margin-width: 10px!important;
 }
 
-.layout-wide .notion-page-content div {
+.layout .notion-page-content div {
     max-width: 1920px!important;
 }
 
-.layout-wide .notion-page-content div:not(.notion-page-block) > div.pseudoSelection {
+.layout .notion-page-content div:not(.notion-page-block) > div.pseudoSelection {
     width: 6px!important;
     margin-right: 8px!important;
 }
 
-.layout-wide > .layout-content-with-divider {
+.layout > .layout-content-with-divider {
     display: none!important;
 }
-.layout-wide > .layout-full {
+.layout > .layout-full {
     display: none!important;
 }
 
-div.layout-wide > div:nth-child(2) > div > div > div.pseudoSelection {
+div.layout > div:nth-child(2) > div > div > div.pseudoSelection {
     visibility: hidden!important;
     height: 50px!important;
 }
-
-div.notion-topbar-action-buttons {
+div.notion-topbar-action-buttons, div.notion-topbar > div > div[role="button"] {
     display: none!important;
 }
+
+.notion-topbar .shadow-cursor-breadcrumb > div[role="button"], .notion-topbar .shadow-cursor-breadcrumb > span:last-of-type {
+    display: none!important;
+}
+
+div.layout h1 {
+    white-space: nowrap!important;
+}
+

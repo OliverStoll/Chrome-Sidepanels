@@ -14,12 +14,12 @@ CheckIfSidebarOpen() {
 }
 
 ; TODO: check the window size and dont assume fullsized windows
-ClickSidebarSimple(sleepTime := 500) {
+ClickSidebarSimple(sleepTime := 500, yCoord := 140) {
     Sleep(100)
     if (CheckIfSidebarOpen()) {
         sleep(sleepTime)
         try {
-            ControlClick "x1800 y140", "A"
+            ControlClick "x1800 " yCoord, "A"
         } catch {
         }
     }
@@ -29,23 +29,21 @@ ClickSidebarSimple(sleepTime := 500) {
 
 
 
-; focus chatgpt sidebar
-~!i:: {
-    Sleep(100)
-    if (CheckIfSidebarOpen()) {
-        sleep(500)
-        loop 10 {
-            sleep(100)
-            try {
-                ControlClick "x1800 y970", "A"
-            } catch {
-                continue
-            }
-        }
-    }
-}
 
 ; focus localexplorer sidebar
 ~!o:: ClickSidebarSimple()
 ~!u:: ClickSidebarSimple()
+~!p:: ClickSidebarSimple()
 ~!h:: ClickSidebarSimple(2000)
+
+~!i:: {
+    Sleep(100)
+    if (CheckIfSidebarOpen()) {
+        sleep(1000)
+        try {
+            ControlClick "x1800 y1030", "A"
+        } catch {
+        }
+    }
+    return
+}

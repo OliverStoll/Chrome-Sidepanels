@@ -5,10 +5,10 @@
   "commands": {
         "_execute_action": {
             "suggested_key": {
-                "windows": "Alt+U",
-                "mac": "Alt+U",
-                "chromeos": "Alt+U",
-                "linux": "Alt+U"
+                "windows": "Alt+H",
+                "mac": "Alt+H",
+                "chromeos": "Alt+H",
+                "linux": "Alt+H"
             }
         }
     },

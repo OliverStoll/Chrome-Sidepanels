@@ -5,10 +5,10 @@
   "commands": {
         "_execute_action": {
             "suggested_key": {
-                "windows": "Alt+Z",
-                "mac": "Alt+Z",
-                "chromeos": "Alt+Z",
-                "linux": "Alt+Z"
+                "windows": "Alt+U",
+                "mac": "Alt+U",
+                "chromeos": "Alt+U",
+                "linux": "Alt+U"
             }
         }
     },
@@ -33,8 +33,14 @@
     {
       "matches": ["https://www.notion.so/*"],
       "js": ["content.js"],
-      "css": ["content.css"],
       "run_at": "document_end",
+      "all_frames": true
+    },
+    {
+      "matches": ["https://www.notion.so/*"],
+      "include_globs": ["https://www.notion.so/oliverstoll?side_panel=1"],
+      "css": ["content.css"],
+      "run_at": "document_start",
       "all_frames": true
     }
   ]

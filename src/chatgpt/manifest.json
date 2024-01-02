@@ -20,6 +20,7 @@
     "content_scripts": [
         {
             "matches": ["https://chat.openai.com/*"],
+            "js": ["js/content.js"],
             "css": ["css/modify_website.css"],
             "run_at": "document_end",
             "all_frames": true
@@ -28,10 +29,10 @@
     "commands": {
         "_execute_action": {
             "suggested_key": {
-                "windows": "Alt+I",
-                "mac": "Alt+I",
-                "chromeos": "Alt+I",
-                "linux": "Alt+I"
+                "windows": "Alt+O",
+                "mac": "Alt+O",
+                "chromeos": "Alt+O",
+                "linux": "Alt+O"
             }
         }
     },

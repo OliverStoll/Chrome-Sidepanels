@@ -1,15 +1,16 @@
 {
   "manifest_version": 3,
-  "name": ".TickTick",
+  "name": "TickTick",
   "version": "1.0",
   "commands": {
         "_execute_action": {
             "suggested_key": {
-                "windows": "Alt+H",
-                "mac": "Alt+H",
-                "chromeos": "Alt+H",
-                "linux": "Alt+H"
-            }
+                "windows": "Alt+I",
+                "mac": "Alt+I",
+                "chromeos": "Alt+I",
+                "linux": "Alt+I"
+            },
+            "global": true
         }
     },
   "icons": {
@@ -33,6 +34,12 @@
     {
       "matches": ["https://ticktick.com/webapp/*"],
       "js": ["content.js"],
+      "run_at": "document_idle",
+      "all_frames": true
+    },
+    {
+      "matches": ["https://ticktick.com/webapp/*"],
+      "include_globs": [ "https://ticktick.com/webapp/#q/today/tasks?side_panel=1"],
       "css": ["content.css"],
       "run_at": "document_idle",
       "all_frames": true

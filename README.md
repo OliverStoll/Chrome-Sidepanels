@@ -1,5 +1,5 @@
 # Chrome Panels for everything
-Bundle of chrome extensions to do everything in the chrome sidepanel. This is a personal project to make my life easier. Feel free to use it if you want.
+Bundle of chrome extensions to do everything in the chrome sidepanel, one hotkey away.
 
 
 # How to install
@@ -14,20 +14,23 @@ Bundle of chrome extensions to do everything in the chrome sidepanel. This is a 
 
 
 # Side Panels
+#### Finished
 - ChatGPT
+- Zotero
+- Home Assistant
+#### In Progress
 - TickTick
 - Notion
-- Home Assistant
-- Local Explorer
-- Github
-- Zotero
-### Planned ?
+- File Explorer
+#### Planned ?
+- Spotify
 - Google Calendar
 - Gmail
+- Github
 
 
 # Shortcuts
-#### Home Assistant
+#### Home Assistant (personal layout)
 - `1-9`: Spotify Playlist
 - `JKLNM`: Spotify Playback
 - `ASDF`: Light scenes

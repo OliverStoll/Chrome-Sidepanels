@@ -14,12 +14,12 @@ CheckIfSidebarOpen() {
 }
 
 ; TODO: check the window size and dont assume fullsized windows
-ClickSidebarSimple(sleepTime := 500, yCoord := 140) {
+ClickSidebarSimple(sleepTime := 500) {
     Sleep(100)
     if (CheckIfSidebarOpen()) {
         sleep(sleepTime)
         try {
-            ControlClick "x1800 " yCoord, "A"
+            ControlClick "x1850 y140", "A"
         } catch {
         }
     }
@@ -34,8 +34,8 @@ ClickSidebarSimple(sleepTime := 500, yCoord := 140) {
 ~!o:: ClickSidebarSimple()
 ~!u:: ClickSidebarSimple()
 ~!p:: ClickSidebarSimple()
+~!z:: ClickSidebarSimple(1000)
 ~!h:: ClickSidebarSimple(2000)
-
 ~!i:: {
     Sleep(100)
     if (CheckIfSidebarOpen()) {

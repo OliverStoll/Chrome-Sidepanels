@@ -23,6 +23,19 @@ document.addEventListener('keydown', function(e){
         }
     }
 
+    // KEY LEFT / RIGHT -> CHANGE SELECTION IN DROPDOWN
+    if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
+        let select = document.getElementById('classFilter');
+        let index = select.selectedIndex;
+        if (e.key === 'ArrowLeft' && index > 0) {
+            index = (index - 1);
+        } else if (e.key === 'ArrowRight' && index < select.options.length - 1) {
+            index = (index + 1);
+        }
+        select.selectedIndex = index;
+        select.dispatchEvent(new Event('change'));
+    }
+
 })
 
 document.getElementById('classFilter').addEventListener('change', function() {

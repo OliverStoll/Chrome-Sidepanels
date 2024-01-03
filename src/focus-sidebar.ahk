@@ -39,7 +39,7 @@ ClickSidebarSimple(sleepTime := 500) {
 ~!i:: {
     Sleep(100)
     if (CheckIfSidebarOpen()) {
-        sleep(1000)
+        sleep(1500)
         try {
             ControlClick "x1800 y1030", "A"
         } catch {

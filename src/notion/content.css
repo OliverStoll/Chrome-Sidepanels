@@ -1,5 +1,5 @@
 .layout {
-    --margin-width: 10px!important;
+    --margin-width: 18px!important;
 }
 
 .layout .notion-page-content div {
@@ -11,13 +11,16 @@
     margin-right: 8px!important;
 }
 
+/* HIDE HEADER ELEMENTS */
 .layout > .layout-content-with-divider {
     display: none!important;
 }
 .layout > .layout-full {
     display: none!important;
 }
-
+.layout > .layout-full + .layout-content > div:nth-child(1) > div:nth-child(1) > div.pseudoSelection {
+    display: none!important;
+}
 div.layout > div:nth-child(2) > div > div > div.pseudoSelection {
     visibility: hidden!important;
     height: 50px!important;
@@ -25,12 +28,63 @@ div.layout > div:nth-child(2) > div > div > div.pseudoSelection {
 div.notion-topbar-action-buttons, div.notion-topbar > div > div[role="button"] {
     display: none!important;
 }
-
 .notion-topbar .shadow-cursor-breadcrumb > div[role="button"], .notion-topbar .shadow-cursor-breadcrumb > span:last-of-type {
     display: none!important;
 }
-
-div.layout h1 {
-    white-space: nowrap!important;
+.notion-page-controls {
+    visibility: hidden!important;
 }
 
+/* HIDE LOADING SCREEN */
+div[role="progressbar"] {
+    display: none!important;
+}
+
+/* FIX HEADER */
+div.layout h1 {
+    white-space: nowrap!important;
+    margin: 4px 0 14px 0!important;
+}
+
+/* BACKGROUND COLOR */
+main.notion-frame, header, div.notion-cursor-listener, div.pseudoSelection, div.notion-table-view-add-row, div.notion-table-view-header-row, div.notion-peek-renderer > div,
+div.notion-collection-view-body > div.notion-table-view > div:nth-child(1) > div:nth-child(1) > div > div:nth-child(1){
+    background-color: #282828!important;
+}
+div.notion-table-view-header-row {
+    box-shadow: none!important;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #404040!important;
+}
+::-webkit-scrollbar {
+    width: 6px!important;
+}
+
+/* FIX TABLES */
+div.notion-table-view {
+    padding-left: 6px!important;
+    padding-right: 6px!important;
+}
+.notion-page-content > .notion-collection_view-block > :nth-child(1) {
+    padding-left: 10px!important;
+    padding-right: 10px!important;
+}
+.notion-table-view > .notion-collection_view-block > div:nth-child(1) > div > div:nth-child(1) > div > div {
+    left: 14px!important;
+}
+.notion-frame > .notion-scroller > div:nth-child(2) > div:nth-child(2) {
+    padding-left: 10px!important;
+    padding-right: 10px!important;
+}
+.notion-frame > .notion-scroller > div:nth-child(2) > div:nth-child(2) .notion-collection_view_page-block {
+    width: 100%!important;
+}
+.notion-frame > .notion-scroller > div:nth-child(3) {
+    padding-left: 10px!important;
+    padding-right: 10px!important;
+}
+/* Make table selectors popups */
+.notion-table-view-row > div > div:nth-child(1), .notion-table-view-header-row> div:nth-child(1) {
+    width:10px!important;
+}

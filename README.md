@@ -1,4 +1,4 @@
-# Chrome Panels for everything
+# Chrome Side-Panels for everything
 Bundle of chrome extensions to do everything in the chrome sidepanel, one hotkey away.
 
 

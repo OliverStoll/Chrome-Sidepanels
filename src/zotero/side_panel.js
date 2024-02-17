@@ -1,20 +1,5 @@
 //  ##################     TABBING     ##################
 document.addEventListener('keydown', function(e){
-  // KEY UP / DOWN
-  if (e.key === 'l' || e.key === 'k') {
-    let focusedElement = document.activeElement;
-    let allFocusableElements = document.querySelectorAll('a[target="_blank"]');
-    let focusableArray = Array.from(allFocusableElements)
-      .filter(element => window.getComputedStyle(element).display !== 'none')
-    let index = focusableArray.indexOf(focusedElement);
-
-    if (e.key === 'l') {
-      index = (index + 1) % focusableArray.length;
-    } else {
-      index = (index - 1) % focusableArray.length;
-    }
-    focusableArray[index].focus();
-  }
   // SPACE FOR OPENING LINK
     if (e.key === ' ') {
         let focusedElement = document.activeElement;
@@ -52,3 +37,12 @@ document.getElementById('classFilter').addEventListener('change', function() {
     }
   });
 });
+
+
+// make a listener for ctrl+shift+l to toggle the class of body from light-mode to dark-mode
+document.addEventListener('keydown', function(e){
+  if (e.ctrlKey && e.key === 'l') {
+    document.body.classList.toggle('dark-theme');
+    document.body.classList.toggle('light-theme');
+  }
+})

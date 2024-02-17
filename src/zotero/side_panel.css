@@ -1,24 +1,45 @@
+:root {
+    /* DARK THEME */
+    --dark-background: #282828;
+    --dark-border: #404040;
+    --dark-border-2: #494949;
+    --dark-text: #fff;
+
+    /* LIGHT THEME */
+    --light-background: #fff;
+    --light-border: #bbb;
+    --light-border-2: #ccc;
+    --light-text: #000;
+}
+
+
+
+
 body {
     width: 100%;
     margin: 0!important;
     padding: 0!important;
     overflow: hidden;
-    background-color: #282828;
 }
+body.light-theme {background-color: var(--light-background);}
+body.dark-theme {background-color: var(--dark-background);}
 select, li, div {
     font-family: "Segoe UI", "Roboto", sans-serif;";
 }
 select {
-    background: #282828;
     padding: 8px;
     margin: 0 auto;
     display: block;
     font-size: 20px;
     color: white;
     border: none;
-    border-bottom: 0px solid #404040;
-    border-radius: 0px;
 }
+body.light-theme select{
+    background-color: var(--light-background);
+    color: var(--light-text);
+}
+body.dark-theme select{background-color: var(--dark-background);}
+
 #zotero-header {
     display: block;
     width: 100%;
@@ -35,19 +56,23 @@ a {
     overflow: hidden;
     text-overflow: ellipsis;
 }
+body.light-theme a{color: var(--light-text);}
+body.dark-theme a{color: var(--dark-text);}
 
 li {
     list-style: none;
-    border-bottom: 1px solid #404040;
 }
+body.light-theme li{border-bottom: 1px solid var(--light-border);}
+body.dark-theme li{border-bottom: 1px solid var(--dark-border);}
 
 #items-list {
     margin-top: 0;
     padding: 4px 8px 0 16px;
     max-height: 98.55vh;
     overflow-y: auto;
-
 }
+
+
 
 #items-list::-webkit-scrollbar-track {
     background: #1e1e1e;
@@ -57,7 +82,7 @@ li {
     border-radius: 10px;
 }
 #items-list::-webkit-scrollbar {
-    width: 4px;
+    width: 6px;
 }
 #items-list::-webkit-scrollbar-thumb:hover {
     background: #555;

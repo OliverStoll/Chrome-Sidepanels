@@ -4,7 +4,7 @@ body {
     margin: 0!important;
     padding: 0!important;
     overflow: hidden;
-    background-color: #282828;
+    /*background-color: #282828;*/
 }
 iframe {
   width: 100%;

@@ -47,15 +47,17 @@ div.layout h1 {
 }
 
 /* BACKGROUND COLOR */
-main.notion-frame, header, div.notion-cursor-listener, div.pseudoSelection, div.notion-table-view-add-row, div.notion-table-view-header-row, div.notion-peek-renderer > div,
-div.notion-collection-view-body > div.notion-table-view > div:nth-child(1) > div:nth-child(1) > div > div:nth-child(1){
-    background-color: #282828!important;
+@media (prefers-color-scheme: dark) {
+    main.notion-frame, header, div.notion-cursor-listener, div.pseudoSelection, div.notion-table-view-add-row, div.notion-table-view-header-row, div.notion-peek-renderer > div,
+    div.notion-collection-view-body > div.notion-table-view > div:nth-child(1) > div:nth-child(1) > div > div:nth-child(1) {
+        background-color: #282828 !important;
+    }
 }
 div.notion-table-view-header-row {
     box-shadow: none!important;
 }
 ::-webkit-scrollbar-thumb {
-    background-color: #404040!important;
+    background-color: #40404066!important;
 }
 ::-webkit-scrollbar {
     width: 6px!important;

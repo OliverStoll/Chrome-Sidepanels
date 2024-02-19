@@ -1,48 +1,13 @@
-//  ##################     TABBING     ##################
-document.addEventListener('keydown', function(e){
-  // SPACE FOR OPENING LINK
-    if (e.key === ' ') {
-        let focusedElement = document.activeElement;
-        if (focusedElement.tagName === 'A') {
-            focusedElement.click();
-        }
-    }
+// keylistener that detects if backspace is pressed. should word even through iframe
 
-    // KEY LEFT / RIGHT -> CHANGE SELECTION IN DROPDOWN
-    if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
-        let select = document.getElementById('classFilter');
-        let index = select.selectedIndex;
-        if (e.key === 'ArrowLeft' && index > 0) {
-            index = (index - 1);
-        } else if (e.key === 'ArrowRight' && index < select.options.length - 1) {
-            index = (index + 1);
-        }
-        select.selectedIndex = index;
-        select.dispatchEvent(new Event('change'));
-    }
+// Get a reference to the button element
+const backButton = document.getElementById('back-button');
 
-})
+// Get a reference to the iframe element
+const iframe = document.querySelector('iframe');
 
-document.getElementById('classFilter').addEventListener('change', function() {
-  var selectedClass = this.value;
-  var listItems = document.querySelectorAll('#items-list li');
-  console.log(listItems);
-
-  listItems.forEach(function(item) {
-    if (selectedClass === 'all' || item.classList.contains(selectedClass)) {
-      item.style.display = 'block'; // Show this item
-        console.log(item);
-    } else {
-      item.style.display = 'none'; // Hide this item
-    }
-  });
+// Add a click event listener to the button
+backButton.addEventListener('click', function() {
+    // Navigate the iframe to "zotero-library.html"
+    iframe.src = 'zotero-library.html';
 });
-
-
-// make a listener for ctrl+shift+l to toggle the class of body from light-mode to dark-mode
-document.addEventListener('keydown', function(e){
-  if (e.ctrlKey && e.key === 'l') {
-    document.body.classList.toggle('dark-theme');
-    document.body.classList.toggle('light-theme');
-  }
-})

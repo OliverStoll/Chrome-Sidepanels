@@ -93,7 +93,7 @@ fetch(zoteroApiUrl)
 
             if (item.pdf_link !== undefined && item.pdf_link !== null) {
                 link.href = item.pdf_link;
-                link.target = '_blank';
+                // link.target = '_blank';
             }
             link.textContent = item.data.title; // or any other property you want to display
 

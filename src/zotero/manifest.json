@@ -18,7 +18,8 @@
   "permissions": [
     "activeTab",
     "sidePanel",
-    "tabs"
+    "tabs",
+    "storage"
   ],
   "background": {
     "service_worker": "service-worker.js"

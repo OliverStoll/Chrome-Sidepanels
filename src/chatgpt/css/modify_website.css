@@ -69,37 +69,31 @@ button.rounded-xl.btn.btn-neutral, div.relative.text-center > span,
 
 
 /* IMPROVE SCROLLBAR */
-::-webkit-scrollbar-track {
-    background: #1e1e1e;
-}
-::-webkit-scrollbar-thumb {
-    background: #383838;
-    border-radius: 10px;
-}
-::-webkit-scrollbar {
-    width: 6px!important;
-}
-::-webkit-scrollbar-thumb:hover {
-    background: #555;
-}
+::-webkit-scrollbar {width: 6px!important;}
+::-webkit-scrollbar-track {background: #1e1e1e;}
+::-webkit-scrollbar-thumb {background: #383838;
+                           border-radius: 10px;}
+::-webkit-scrollbar-thumb:hover {background: #555;}
 
 
 /* DARK MODE */
-/*
-body {
-    background-color: var(--dark-background)!important;
+@media (prefers-color-scheme: dark) {
+    body.light-theme {
+        background-color: var(--dark-background)!important;
+    }
+    :root {
+        --surface-secondary: var(--dark-background)!important;
+    }
+    body.light-theme .dark\:bg-gray-800 {
+        background-color: var(--dark-background)!important;
+    }
 }
-:root{
-    --surface-secondary: var(--dark-background)!important;
-}
-.dark\:bg-gray-800 {
-    background-color: var(--dark-background)!important;
-}
-*/
+
 
 /* LIGHT MODE  # TODO: add the js to toggle and add it here too, also fix code highlighting */
 
-.dark {
+
+body.light-theme, body.light-theme .dark {
     --text-primary: var(--gray-900) !important;
     --text-secondary: var(--gray-700) !important;
     --text-tertiary: var(--gray-500) !important;
@@ -115,15 +109,19 @@ body {
     --sidebar-surface-secondary: var(--gray-100) !important;
     --sidebar-surface-tertiary: var(--gray-200) !important;
 }
-.bg-gray-950 {
-    background-color: var(--light-secondary-background)!important;
+
+body.light-theme .bg-gray-950 {
+    background-color: var(--light-secondary-background) !important;
 }
-.dark\:text-white {
-    color: var(--light-text)!important;
+
+body.light-theme .dark\:text-white {
+    color: var(--light-text) !important;
 }
-code {
-    color: #000!important;
+
+body.light-theme code {
+    color: #000 !important;
 }
-code span.hljs-comment {
-    color: #999!important;
+
+body.light-theme code span.hljs-comment {
+    color: #999 !important;
 }

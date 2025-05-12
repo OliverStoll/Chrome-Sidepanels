@@ -1,6 +1,8 @@
 /* reduce horizontal padding */
 main.notion-frame > div > div > div[role="textbox"] > div.layout {
-    grid-template-columns: auto!important;
+    /*grid-template-columns: auto!important; */
+    display: block!important;
+    padding-left: 10px;
 }
 
 /* Overwrite max-width of data block elements */

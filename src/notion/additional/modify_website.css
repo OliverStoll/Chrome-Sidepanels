@@ -13,10 +13,6 @@ div > div[role="textbox"] > div.layout > div.layout-content:last-of-type > div >
     width: 10px !important;
 }
 
-*::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
-}
 
 * {
     scrollbar-width: thin;

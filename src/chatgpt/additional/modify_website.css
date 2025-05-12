@@ -10,6 +10,14 @@ body > a + div > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type
 
 
 /* Scrollable chat */
-#page-header + div > div > div {
-    /*scrollbar-gutter: auto!important; */
+* {
+    scrollbar-width: thin;
+}
+
+
+/* Less horizontal padding */
+article > div
+{
+    padding-left: 0;
+    padding-right: 0;
 }

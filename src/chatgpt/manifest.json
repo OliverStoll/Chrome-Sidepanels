@@ -1,0 +1,41 @@
+{
+  "manifest_version": 3,
+  "name": "ChatGPT",
+  "version": "0.0.1",
+  "icons": {
+    "16": "icon.png",
+    "32": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "windows": "Alt+I",
+        "mac": "Alt+I",
+        "chromeos": "Alt+I",
+        "linux": "Alt+I"
+      }
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://chatgpt.com/*"],
+      "css": ["additional/modify_website.css"],
+      "js": ["additional/always_send.js"],
+      "run_at": "document_end",
+      "all_frames": true
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Open ChatGPT"
+  },
+  "side_panel": {
+    "default_path": "sidepanel/index.html"
+  },
+  "host_permissions": ["<all_urls>"],
+  "permissions": ["sidePanel", "declarativeNetRequest"]
+}

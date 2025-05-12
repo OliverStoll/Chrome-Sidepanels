@@ -1,0 +1,13 @@
+/* reduce horizontal padding */
+main.notion-frame > div > div > div[role="textbox"] > div.layout {
+    grid-template-columns: auto!important;
+}
+
+/* Overwrite max-width of data block elements */
+div > div[role="textbox"] > div.layout > div.layout-content:last-of-type > div > div[data-block-id] {
+    max-width: 1000px !important;
+}
+
+body {
+    display: none!important;
+}

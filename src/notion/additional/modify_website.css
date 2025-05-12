@@ -8,6 +8,16 @@ div > div[role="textbox"] > div.layout > div.layout-content:last-of-type > div >
     max-width: 1000px !important;
 }
 
-body {
-    display: none!important;
+/* Make the left padding on hierarchy smaller */
+.notion-list-item-box-left.pseudoSelection {
+    width: 10px !important;
+}
+
+*::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+* {
+    scrollbar-width: thin;
 }

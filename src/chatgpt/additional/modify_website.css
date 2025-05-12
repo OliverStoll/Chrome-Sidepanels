@@ -1,8 +1,15 @@
+/* Hide the warning banner below text field */
 #thread-bottom-container > div:last-of-type {
     display: none!important;
 }
 
-
+/* Make Header smaller by moving it upward */
 body > a + div > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) {
     height: 26px;
+}
+
+
+/* Scrollable chat */
+#page-header + div > div > div {
+    /*scrollbar-gutter: auto!important; */
 }

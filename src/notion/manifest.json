@@ -11,10 +11,10 @@
   "commands": {
     "_execute_action": {
       "suggested_key": {
-        "windows": "Alt+P",
-        "mac": "Alt+P",
-        "chromeos": "Alt+P",
-        "linux": "Alt+P"
+        "windows": "Alt+O",
+        "mac": "Alt+O",
+        "chromeos": "Alt+O",
+        "linux": "Alt+O"
       }
     }
   },

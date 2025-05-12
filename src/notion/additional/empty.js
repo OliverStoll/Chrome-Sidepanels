@@ -1,0 +1,1 @@
+console.log('NOTION: Content script loaded');

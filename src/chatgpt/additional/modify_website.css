@@ -1,0 +1,8 @@
+#thread-bottom-container > div:last-of-type {
+    display: none!important;
+}
+
+
+body > a + div > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) {
+    height: 26px;
+}

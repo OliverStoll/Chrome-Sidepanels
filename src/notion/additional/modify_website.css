@@ -23,3 +23,11 @@ div > div[role="textbox"] > div.layout > div.layout-content:last-of-type > div >
 div[data-block-id] {
     max-width: 9999px !important;
 }
+
+.layout-full + .layout-content + .layout-content > div > div > div:last-of-type {
+    /* width: calc(100% + 96px); */
+    left: 0!important;
+}
+.layout-full + .layout-content + .layout-content > div > div > div:last-of-type > .layout {
+    display: block;
+}

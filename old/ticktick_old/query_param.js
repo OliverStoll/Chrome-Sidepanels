@@ -1,4 +1,4 @@
-//  ##################     SIDE PANEL - QUERY PARAMETER     #################
+    //  ##################     SIDE PANEL - QUERY PARAMETER     #################
 function addSidePanelQueryParam() {
     let url = window.location.href;
     if (!url.includes("side_panel=")) {

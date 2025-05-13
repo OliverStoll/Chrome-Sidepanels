@@ -19,3 +19,7 @@ div > div[role="textbox"] > div.layout > div.layout-content:last-of-type > div >
 * {
     scrollbar-width: thin;
 }
+
+div[data-block-id] {
+    max-width: 9999px !important;
+}

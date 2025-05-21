@@ -10,7 +10,7 @@ Bundle of chrome extensions to do everything in the chrome sidepanel, one hotkey
   - -> move copy to folder found by searching "shell:startup" in Windows explorer
 
 
-# Side Panels
+# Supported Side Panels
 - ChatGPT
 - Notion
 - Telegram

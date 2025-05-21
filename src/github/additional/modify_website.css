@@ -1,0 +1,16 @@
+feed-container {
+    display: none!important;
+}
+
+footer.footer {
+    display: none!important;
+}
+
+.application-main > div > div {
+    min-height: 93vh!important;
+}
+
+* {
+    scrollbar-width: thin;
+}
+

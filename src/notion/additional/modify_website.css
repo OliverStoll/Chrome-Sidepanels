@@ -20,6 +20,15 @@ div > div[role="textbox"] > div.layout > div.layout-content:last-of-type > div >
     scrollbar-width: thin;
 }
 
+/* Make page img banner smaller */
+.layout > div.layout-full {
+    max-height: 60px;
+    overflow: hidden;
+}
+.layout > .layout-full + div.layout-content .pseudoSelection {
+    height: 20px;
+}
+
 div[data-block-id] {
     max-width: 9999px !important;
 }

@@ -36,7 +36,7 @@ You can launch each side panel with a single key combo (configurable via `manife
 
 | Tool     | Default Hotkey |
 |----------|----------------|
-| ChatGPT  | `Alt + U`      |
+| ChatGPT  | `Alt + I`      |
 | Notion   | `Alt + O`      |
 | Telegram | `Alt + W`      |
 | GitHub   | `Alt + G`      |
